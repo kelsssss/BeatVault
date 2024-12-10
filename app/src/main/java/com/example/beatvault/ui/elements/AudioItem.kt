@@ -7,22 +7,29 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.beatvault.ui.BeatVaultViewModel
 import com.example.beatvault.ui.theme.BeatVaultTheme
 
 
 @Composable
 fun AudioItem(
+    viewModel: BeatVaultViewModel,
     modifier: Modifier = Modifier
 ){
+    val isPlaying = remember {  mutableStateOf(false) }
+
     Card(
         modifier = modifier
             .fillMaxWidth()
@@ -35,12 +42,29 @@ fun AudioItem(
                 .padding(5.dp),
         ) {
             IconButton(
-                onClick = { }
+                onClick = {
+                    if(isPlaying.value == false) {
+                    viewModel.playAudio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3")
+                    isPlaying.value = !isPlaying.value
+                } else {
+                    viewModel.stopPlayer()
+                    isPlaying.value = !isPlaying.value
+
+                }
+                }
             ) {
-                Icon(
-                    Icons.Default.PlayArrow,
-                    contentDescription = null
-                )
+                if(isPlaying.value == false){
+                    Icon(
+                        Icons.Default.PlayArrow,
+                        contentDescription = null
+                    )
+                } else {
+                    Icon(
+                        Icons.Filled.Clear,
+                        contentDescription = null
+                    )
+                }
+
             }
             Column(
 //                verticalArrangement = Ar
@@ -62,6 +86,6 @@ fun AudioItem(
 @Composable
 fun AudioItemPreview(){
     BeatVaultTheme {
-        AudioItem()
+//        AudioItem()
     }
 }

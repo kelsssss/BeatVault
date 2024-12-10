@@ -55,6 +55,11 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
 
+    implementation(libs.androidx.media3.exoplayer)
+    implementation(libs.androidx.media3.ui)
+    implementation(libs.exoplayer.core)
+    implementation(libs.exoplayer)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
