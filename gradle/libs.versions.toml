@@ -12,6 +12,7 @@ activityCompose = "1.9.3"
 composeBom = "2024.11.00"
 lifecycleViewmodelComposeVersion = "2.8.7"
 media3Exoplayer = "1.5.0"
+navigationComposeVersion = "2.8.4"
 retrofitVersion = "2.11.0"
 
 
@@ -36,6 +37,7 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationComposeVersion" }
 retrofit2-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
 
 

@@ -17,7 +17,9 @@ import com.example.beatvault.ui.BeatVaultViewModel
 
 import com.example.beatvault.ui.elements.AudioItem
 import com.example.beatvault.ui.elements.AudioList
+import com.example.beatvault.ui.elements.BeatVaultBottomBar
 import com.example.beatvault.ui.elements.BeatVaultTopBar
+import com.example.beatvault.ui.elements.BeatVaultBottomBar
 import com.example.beatvault.ui.theme.BeatVaultTheme
 
 @Composable
@@ -34,8 +36,10 @@ fun MainScreen(
         viewModel.initializeExoPlayer(context)
     }
 
-    Scaffold(modifier = Modifier.fillMaxSize(),
-        topBar = { BeatVaultTopBar() }
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        topBar = { BeatVaultTopBar() },
+        bottomBar = { BeatVaultBottomBar() }
     ) { innerPadding ->
 //        MainScreen(innerPaddingValues = innerPadding)
 

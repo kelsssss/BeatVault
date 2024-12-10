@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.androidx.media3.ui)
     implementation(libs.exoplayer.core)
     implementation(libs.exoplayer)
+    implementation(libs.navigation.compose)
 
 
     testImplementation(libs.junit)
