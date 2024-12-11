@@ -33,8 +33,6 @@ fun AudioItem(
     Card(
         modifier = modifier
             .fillMaxWidth()
-
-//            .height(60.dp)
     ) {
         Row(
             modifier = Modifier
@@ -67,7 +65,6 @@ fun AudioItem(
 
             }
             Column(
-//                verticalArrangement = Ar
             ) {
                 Text(
                     text = "Имя артиста"

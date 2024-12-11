@@ -60,6 +60,7 @@ dependencies {
     implementation(libs.exoplayer.core)
     implementation(libs.exoplayer)
     implementation(libs.navigation.compose)
+    implementation(libs.androidx.material)
 
 
     testImplementation(libs.junit)
