@@ -34,7 +34,6 @@ fun MainScreen(
     modifier: Modifier = Modifier,
 ){
     val context = LocalContext.current
-
     val navController = rememberNavController()
 
     LaunchedEffect(context) {
