@@ -35,7 +35,4 @@ class BeatVaultViewModel : ViewModel(){
                 player = ExoPlayer.Builder(context).build()
             }
         }
-
-
-
 }

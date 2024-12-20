@@ -50,12 +50,10 @@ fun MainScreen(
         Surface(
             modifier = modifier.fillMaxSize().padding(innerPadding)
         ) {
-//            Column(
-//                modifier = modifier.fillMaxSize().padding(bottom = innerPadding.calculateBottomPadding())
-//            ) {
-//                AudioList(viewModel)
-                NavigationGraph(viewModel, navController)
-//            }
+                NavigationGraph(
+                    viewModel,
+                    navController
+                )
         }
     }
 }

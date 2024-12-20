@@ -24,7 +24,6 @@ import com.example.beatvault.ui.navigation.AddItem
 
 @Composable
 fun BeatVaultBottomBar(navController: NavHostController)
-
 {
 
     val screens = listOf(
@@ -35,7 +34,6 @@ fun BeatVaultBottomBar(navController: NavHostController)
     BottomNavigation(
         modifier = Modifier
             .navigationBarsPadding()
-//            .padding(bottom = 50.dp)
     ) {
         screens.forEach{ screen ->
             AddItem(
@@ -43,10 +41,7 @@ fun BeatVaultBottomBar(navController: NavHostController)
                 navController = navController
             )
         }
-
     }
-
-
 }
 
 //    BottomAppBar(
