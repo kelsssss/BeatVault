@@ -7,7 +7,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.beatvault.data.exampledata.TrackInfo
 import com.example.beatvault.data.exampledata.favoriteExampleList
 import com.example.beatvault.ui.BeatVaultViewModel
 
